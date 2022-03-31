@@ -11,9 +11,9 @@ export const useGetRequest = (path) => {
         try {
             setIsloading(true);
             setTimeout( async () => {
-                // const response = await fetch(`${API_URL}/${path}`);
-                // const json = await response.json();
-                // setData(json);
+                const response = await fetch(`${API_URL}/${path}`);
+                const json = await response.json();
+                setData(json);
                 setIsloading(false);
             }, 1000)
         } catch (error) {
